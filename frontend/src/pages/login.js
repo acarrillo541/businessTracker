@@ -27,9 +27,6 @@ export default function Login(){
                 <Link to='/home'>
                     <MDBBtn type='submit' className='mb-4 rounded-9' block>Login</MDBBtn>
                 </Link>
-                <Link to='/home'>
-                    link
-                </Link>
             </form>
             <MDBRow className='mb-5'>
                 <MDBCol className='d-flex justify-content-center'>
