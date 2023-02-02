@@ -1,17 +1,20 @@
+import {useState} from 'react';
 import { MDBBtn, MDBCol, MDBIcon, MDBNavbar, MDBRow } from "mdb-react-ui-kit";
 import Sidebar from "./sidebar";
 import "./styles.css";
 
 export default function Home(){
-    var start=1;
+    const [start, setStart]=useState(1);
     function flipStart(){
-        start = start*-1;
+        const flipped = start*-1;
+        setStart(flipped);
+        console.log(start);
     }
     
     return(
 <>
     <MDBRow>
-        {start == 1 &&
+        { start === 1 &&
         <MDBCol size={1} className="bg-dark " >
             <Sidebar/>
         </MDBCol>
@@ -20,10 +23,16 @@ export default function Home(){
         <MDBCol >
             <MDBRow>
                 <MDBNavbar className="bg-dark d-flex justify-content-start">
-                    <MDBBtn className="bg-dark " floating onClick={()=>{start=start*-1; console.log(start);}} >
+                    {start === 1?
+                    <MDBBtn className="bg-dark shadow-0 pe-2"  floating on >
+                        <MDBIcon icon="angle-double-left" onClick={flipStart}/>
+                    </MDBBtn>
+                    :
+                    <MDBBtn className="bg-dark shadow-0 pe-2 ps-2"  floating onClick={flipStart} >
                         <MDBIcon icon="angle-double-right"/>
                     </MDBBtn>
-                    Hello, Alan Carrillo
+                    }
+                    Hello, Alan Carrillo 
                     
                 </MDBNavbar>
             </MDBRow>
