@@ -2,8 +2,9 @@ import {useState} from 'react';
 import { MDBBtn, MDBCol, MDBIcon, MDBNavbar, MDBRow } from "mdb-react-ui-kit";
 import Sidebar from "./pages/sidebar";
 import "./pages/styles.css";
+import { Outlet } from 'react-router-dom';
 
-function Layout(){
+function Layout({children}){
   
   const [start, setStart]=useState(1);
   function flipStart(){
@@ -38,10 +39,13 @@ function Layout(){
               </MDBNavbar>
           </MDBRow>
           <MDBRow>
-              {/*do some shit here*/}
+              {/*do some shit here*/ }
+              <main>{children}</main>
+
           </MDBRow>
       </MDBCol>
   </MDBRow>
+  <Outlet/>
 </>
   );
 }
