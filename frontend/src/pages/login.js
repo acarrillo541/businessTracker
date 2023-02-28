@@ -5,7 +5,7 @@ import {
     MDBInput,
     MDBRow,
   } from 'mdb-react-ui-kit';
-  import {Outlet, Link} from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 
 import logo from "./../gopher.png";
@@ -24,9 +24,7 @@ export default function Login(){
             <form className=''>
                 <MDBInput className='mb-2 mt-4' type='email'  label='Email address'/>
                 <MDBInput className='mb-4' type='password' label='Password'/>
-                <Link to='/home'>
-                    <MDBBtn type='submit' className='mb-4 rounded-9' block>Login</MDBBtn>
-                </Link>
+                <MDBBtn type='submit' className='mb-4 rounded-9' block>Login</MDBBtn>
             </form>
             <MDBRow className='mb-5'>
                 <MDBCol className='d-flex justify-content-center'>
@@ -40,7 +38,6 @@ export default function Login(){
             </MDBCol>
         </MDBCol>
         </div>
-        <Outlet/>
     </>
     );
 }

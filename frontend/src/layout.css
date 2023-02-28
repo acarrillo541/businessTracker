@@ -1,0 +1,10 @@
+.layout{
+    display: flex;
+}
+
+.sidebar{
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    padding: 15px;
+}
