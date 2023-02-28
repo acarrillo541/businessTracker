@@ -4,7 +4,27 @@
     border-color: grey;
     width: 350px;
     height: 300px;
-    margin-left: 5vw;
-    margin-bottom: 3vw;
-    padding-left: 2vw;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.quickAdd{
+    display: inline-flex;
+    background-color: grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.quickBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
 }

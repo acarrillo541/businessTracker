@@ -4,12 +4,19 @@ import "./layout.css"
 export default function Sidebar(){
     return(
         <div>
-            <p>Add New</p>
-            <p>Dashboard</p>
-            <p>Projects</p>
-            <p>Invoices</p>
-            <p>Expenses</p>
-            <p>Cash Flow</p>
+            <Link to={"/"}>
+                <p>Dashboard</p>
+            </Link>
+            <Link to={"/projects"}>
+                Projects
+            </Link>
+            <Link to={"/contacts"}>
+                <p>Contacts</p>
+            </Link>
+            <Link to={"/login"}>
+                <p>Login</p>
+            </Link>
+
         </div>
     );
 }

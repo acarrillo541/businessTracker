@@ -3,7 +3,7 @@ import "./styles.css";
 export default function Home(){
     return(
 <>
-    <div className="d-flex flex-wrap justify-content-center">
+    <div className="table">
         <div class="box">Cash Flow</div>
         <div class="box">Expenses</div>
         <div class="box">Sales</div>

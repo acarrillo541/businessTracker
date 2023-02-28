@@ -1,6 +1,6 @@
 
 export default function Contacts (){
     return (
-        <p>contactsfdsafd</p>
+        <p>contactsfdsaffdsfsdfsdfdsfsdfsdfsdfsdfsdfd</p>
     );
 }
