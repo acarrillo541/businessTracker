@@ -7,17 +7,18 @@
 }
 
 .table{
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .quickAdd{
-    display: inline-flex;
     background-color: grey;
     border-radius: 10px;
     padding: 10px;
+    margin: 5rem;
+    max-width: 400px;
 }
 
 .quickBtn{
@@ -25,6 +26,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.bigBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.bigBtn:hover{
+    background-color: rgb(187, 145, 145);
+}
+
+
+.table-header{
+    color:white;
+    font-size: 1.25rem;
 }

@@ -1,11 +1,11 @@
-import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 const QuickBtn = ({label})=>{
     return(
     <div className="quickBtn">
-        <MDBBtn floating >
+        <div className="bigBtn">
             <MDBIcon icon="download"/>
-        </MDBBtn>
+        </div>
         <p>{label}</p>
     </div>
     );
@@ -16,10 +16,15 @@ export default function Project(){
     <>
         <div>
             <div className="quickAdd">
-                <QuickBtn label="Estimate"/>
-                <QuickBtn label="Invoice"/>
-                <QuickBtn label="Receipt"/>
-            </div>
+                <div className="table-header">
+                    Quick Actions
+                </div>
+                <div className="table">
+                    <QuickBtn label="Estimate"/>
+                    <QuickBtn label="Invoice"/>
+                    <QuickBtn label="Receipt"/>
+                </div>
+           </div>
         </div>
     </>
     );
