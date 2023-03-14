@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from api.models import UserProfile
+from api.models import JobInfo
 
-class UserSerializer(serializers.ModelSerializer):
+class JobSerializer(serializers.ModelSerializer):
     class Meta:
-        model=UserProfile
-        fields='__all__'
+        model=JobInfo
+        fields = ('id', 'name')

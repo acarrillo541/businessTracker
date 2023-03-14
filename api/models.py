@@ -1,9 +1,12 @@
 from django.db import models
-from django.contrib.auth.models import User
 
+class JobInfo(models.Model):
+    number = models.IntegerField()
+    name = models.CharField()
+    date = models.DateField()
+    address = models.CharField()
+    status = models.CharField()
 
-# Create your models here.
-class UserProfile(models.Model):
-    name=models.CharField(max_length=200),
-    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    def __str__(self):
+        return name
 

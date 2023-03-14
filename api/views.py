@@ -1,14 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-from .models import UserProfile
+from rest_framework import generics, status
 from .serializers import UserSerializer
 
-# Create your views here.
-def index(request):
-  return HttpResponse("Hello world")
+from .models import JobInfo
 
-def users(request):
-  #invoke serializer and return to comment
-  data=UserProfile.objects.all()
-  serializer=UserSerializer(data,many=True)
-  return JsonResponse({'user_profile':serializer.data})
+class JobInfoView(generics.ListAPIView):
+  model = JobInfo
+  serializer_class = JobSerializer
+
